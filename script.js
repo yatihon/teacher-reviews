@@ -1,7 +1,7 @@
 const STATE = {
   search: "",
   subject: "all",
-  sort: "subject", // 'subject' | 'teacher'
+  sort: "subject", 
 };
 
 let DATA = [];
