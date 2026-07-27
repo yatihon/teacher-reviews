@@ -321,6 +321,7 @@ main#results {
   line-height: 1.5;
   color: var(--ink);
   border-top: 1px dashed var(--line);
+  white-space: pre-line;
 }
 
 .card__reviews li:first-child { border-top: none; padding-top: 2px; }
