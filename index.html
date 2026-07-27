@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Картотека — отзывы о преподавателях</title>
+<meta name="description" content="Отзывы студентов о преподавателях: поиск по фамилии и предмету, сортировка по алфавиту.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <div class="brand">
+      <span class="brand__eyebrow">картотека студенческих отзывов</span>
+      <h1 class="brand__title">Картотека</h1>
+      <p class="brand__tagline">Ищите преподавателя по фамилии или предмету — и узнавайте, что о нём говорят те, кто уже прошёл курс.</p>
+    </div>
+
+    <!-- Замените href на вашу ссылку на Google Форму -->
+    <a class="predlozhka" href="https://forms.gle/ЗАМЕНИТЕ-НА-СВОЮ-ССЫЛКУ" target="_blank" rel="noopener">
+      <span class="predlozhka__pinhead" aria-hidden="true"></span>
+      Предложка
+    </a>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="toolbar__inner">
+    <div class="field field--search">
+      <label for="search-input" class="field__label">Поиск</label>
+      <input id="search-input" type="search" placeholder="Фамилия преподавателя или предмет…" autocomplete="off">
+    </div>
+
+    <div class="field field--select">
+      <label for="subject-filter" class="field__label">Предмет</label>
+      <select id="subject-filter">
+        <option value="all">Все предметы</option>
+      </select>
+    </div>
+
+    <div class="field field--sort">
+      <span class="field__label">Сортировка</span>
+      <div class="sort-toggle" role="group" aria-label="Сортировка карточек">
+        <button type="button" data-sort="subject" class="active" aria-pressed="true">По предмету</button>
+        <button type="button" data-sort="teacher" aria-pressed="false">По ФИО</button>
+      </div>
+    </div>
+  </div>
+  <p id="results-count" class="results-count" aria-live="polite"></p>
+</div>
+
+<main id="results" aria-live="polite"></main>
+
+<footer class="site-footer">
+  <p>Отзывы добавляют сами студенты через кнопку «Предложка».</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
