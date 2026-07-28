@@ -409,6 +409,7 @@ main#results {
 @media (max-width: 640px) {
   .site-header__inner { flex-direction: column; }
   .header-actions { align-self: flex-start; }
+  .toolbar { position: static; }
   .toolbar__inner { flex-direction: column; align-items: stretch; }
   .field--select { flex: 1 1 auto; }
   .card__teacher { margin-right: 0; }
